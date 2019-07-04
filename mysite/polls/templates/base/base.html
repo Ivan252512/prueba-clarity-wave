@@ -1,0 +1,64 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mysite</title>
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!--Styles-->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <h1><a href="{% url 'index' %}">Simple django Aplication</a></h1>
+        </div>
+    </header>
+
+    <div class="container principal">
+        {% block body %} {% endblock body %}
+    </div>
+
+    <!--Bootstrap js-->
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/mysite.js' %}"></script>
+
+</body>
+
+<!-- Footer section
+================================================== -->
+<footer>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12 col-sm-12">
+                <ul class="social-icon">
+                    <li><a href="#" class="fa fa-facebook"></a></li>
+                    <li><a href="#" class="fa fa-twitter"></a></li>
+                    <li><a href="#" class="fa fa-dribbble"></a></li>
+                    <li><a href="#" class="fa fa-behance"></a></li>
+                    <li><a href="#" class="fa fa-google-plus"></a></li>
+                </ul>
+                <p> Copyright © 2019 - Simple Django application - Clarity wave</p>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+</html>

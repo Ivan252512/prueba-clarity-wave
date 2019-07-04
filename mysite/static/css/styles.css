@@ -1,0 +1,88 @@
+/* Body 
+------------------------------------- */
+body {
+background: #ffffff;
+font-family: 'Source Sans Pro', sans-serif;
+font-weight: 300;
+}
+
+html,body {
+width: 100%;
+overflow-x: hidden;
+}
+
+html {
+font-size: 100%;
+}
+
+/* Header 
+------------------------------------- */
+header{
+    background: rgba(18, 110, 146, 0.952);
+    margin-bottom: 2em; 
+    padding: 1.2em;
+}
+
+header h1 a{
+    color: rgb(245, 245, 245);
+    font-size: 0.8em;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+header h1 a:hover{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+
+/* Principal 
+------------------------------------- */
+.principal a{
+    color: rgb(0, 0, 0);
+}
+
+.principal h2{
+    margin-bottom: 0.5em; 
+}
+
+/* footer section styles
+/* ========================================== */
+footer {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+/* social icon */
+.social-icon {
+    padding: 0;
+    margin: 0;
+  }
+  .social-icon li {
+    list-style: none;
+    display: inline-block;
+  }
+  .social-icon li a {
+    border-radius: 100px;
+    border: 1px solid transparent;
+    color: #000000;
+    font-size: 18px;
+    width: 50px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    padding: 0px;
+    margin-top: 14px;
+    margin-right: 8px;
+    margin-left: 8px;
+    position: relative;
+    top: 0px;
+  }
+  .social-icon li a:hover {
+    background: #000000;
+  }
+  
