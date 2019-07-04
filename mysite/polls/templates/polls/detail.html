@@ -19,13 +19,13 @@
                 {{ choice.choice_text }}
             </li>
             <div class="text-right">
-                <form method="get" id="vote" data-id="{% url 'vote' choice.id %}">
+
+                <button type="submit" class="btn btn-primary btn-sm" onclick='$.vote("{{ choice.id }}");'>
                     {% csrf_token %}
-                    <button type="submit" class="btn btn-primary btn-sm">
-                        <span class="fa fa-thumbs-up"> Votar </span>
-                    </button>
-                    {{ choice.votes }} vote{{ choice.votes|pluralize }}
-                </form>
+                    <span class="fa fa-thumbs-up"> Votar </span>
+                </button>
+                {{ choice.votes }} vote{{ choice.votes|pluralize }}
+
             </div>
             <br>
             <br>

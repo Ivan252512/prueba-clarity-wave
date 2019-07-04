@@ -58,29 +58,11 @@ $(document).ready(function () {
     });
 
     //Vote
-    $.vote = function () {
-        $('input').on('click', function () {
-            var csrftoken = $("[name=csrfmiddlewaretoken]").val();
-            $.ajax({
-                type: "POST",
-                url: $(this).data('id'),
-                headers: {
-                    "X-CSRFToken": csrftoken
-                },
-                csrfmiddlewaretoken: '{{ csrf_token }}',
-                success: function () {
-                    location.reload();
-                }
-            });
-            return false;
-        });
-    };
-
-    $("#vote").submit(function () {
+    $.vote = function (URL) {
         var csrftoken = $("[name=csrfmiddlewaretoken]").val();
         $.ajax({
             type: "POST",
-            url: $(this).data('id'),
+            url: "/polls/"+URL+"/vote/",
             headers: {
                 "X-CSRFToken": csrftoken
             },
@@ -90,6 +72,6 @@ $(document).ready(function () {
             }
         });
         return false;
-    });
+    };
 
 });
